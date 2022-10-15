@@ -1,10 +1,10 @@
-CC = g++
-all: main
-main: hello.o
-      ${CC} -o main main.o
+output: main.o
+	g++ main.o -o output
+ 
 main.o: main.cpp
-      ${CC} -c main.cpp
+	g++ -c main.cpp
+
 clean:
-      rm main.o main
+	rm *.o output
 
 
