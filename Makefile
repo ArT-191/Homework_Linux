@@ -10,7 +10,11 @@ output2: hw2_22.11.o
 hw2_22.11.o:  hw2_22.11.cpp
 	g++ -c hw2_22.11.cpp
 
-clean:
-	rm *.o output1 output2
- 
+output3: hw3_05.12.o
+	g++ hw3_05.12.o -o output3
 
+hw3_05.12.o: hw3_05.12.cpp
+	g++ -c hw3_05.12.cpp
+
+clean:
+	rm *.o output1 output2 output3
