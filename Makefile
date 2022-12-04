@@ -19,7 +19,7 @@ hw3_05.12.o: hw3_05.12.cpp
 output4: hw4_05.12.o
 	g++ hw4_05.12.o -o output4
  
-hw3_05.12.o: hw4_05.12.cpp
+hw4_05.12.o: hw4_05.12.cpp
 	g++ -c hw4_05.12.cpp	
 	
 clean:
