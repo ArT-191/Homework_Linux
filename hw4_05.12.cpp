@@ -53,11 +53,9 @@ void *routine(void *input) {
     
    
   }  
-  static unsigned int index = 0;
-
-  
-   
-   ++index;
+  static unsigned int index = 0;   
+ 
+  ++index;
   
   std::string pathname = "out_" + std::to_string (index) + ".txt"; 
  
@@ -76,25 +74,23 @@ void *routine(void *input) {
   fd = fopen(pathname.c_str(),"w+"); // Creates an empty file for both reading and writing
 
   fprintf(fd,"%d %s %d %s",num1, operators_to_string[oper], num2, _result.c_str());//Writing variables in file
-  
-  
-  
+   
   exit(0);
   return NULL;
 }
 
    std::istream& operator>>(std::istream& is, Operators& operators){ //overloading operator ">>"
-    std::string _operators;
-    is >> _operators;
+ 	  std::string _operators;
+    	  is >> _operators;
 
-    if (_operators == "s")
-        operators = s;
-    else if (_operators == "m")
-        operators = m;
-    else if (_operators == "ss")
-        operators = ss;
+     	  if (_operators == "s")
+           	operators = s;
+    	  else if (_operators == "m")
+        	operators = m;
+    	  else if (_operators == "ss")
+        	operators = ss;
 
-    return is;
+    	  return is;
 }
 
 int main() {
