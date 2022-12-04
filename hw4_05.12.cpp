@@ -55,7 +55,7 @@ void *routine(void *input) {
   }  
   static unsigned int index = 0;
 
-  pthread_t id = pthread_self();//Threads ID
+  
    
    ++index;
   
@@ -67,7 +67,7 @@ void *routine(void *input) {
   /*It was necessary to,write "enum" in file,
 	but that's not possible ,                                                       
   that's why i convert my enum named "Operators" to string*/
-    [s] = "s",
+    	  [s] = "s",
 	  [m] = "m",                                            
 	  [ss] = "s",
 
