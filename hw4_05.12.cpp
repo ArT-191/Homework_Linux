@@ -67,7 +67,7 @@ void *routine(void *input) {
   that's why i convert my enum named "Operators" to string*/
     	  [s] = "s",
 	  [m] = "m",                                            
-	  [ss] = "s",
+	  [ss] = "ss",
 
   };
  
