@@ -1,0 +1,3 @@
+Semaphore time is 0.350810 senconds
+Spinlock time is 0.109363 senconds
+Mutex time is 0.081347 senconds
