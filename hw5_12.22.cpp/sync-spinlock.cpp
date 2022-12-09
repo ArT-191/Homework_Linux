@@ -64,7 +64,7 @@ int main () {
     
     std::string pathname = "time.txt";
     int end = clock();
-    std::string result = "Spinlock time is " + std::to_string(((float)end - start)/CLOCKS_PER_SEC) + " senconds";
+    std::string result = "Spinlock time is " + std::to_string(((float)end - start)/CLOCKS_PER_SEC) + " seconds";
     fd = fopen(pathname.c_str(),"a"); 
 
     fprintf(fd,"%s\n",result.c_str());
