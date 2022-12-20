@@ -23,7 +23,7 @@ void *thread(void *arg) {
     	 int increment = counter++;
   	 pthread_mutex_unlock(&counter_mutex);
     			
-		  if (isPrime(counter)) {
+		  if (isPrime(increment)) {
       		    printf("%d ", counter);
     		
 		  }	
