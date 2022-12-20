@@ -20,11 +20,11 @@ void *thread(void *arg) {
   	while (counter <= N) {
 		
     		if (isPrime(counter)) {	
-		pthread_mutex_lock(&counter_mutex);	
+			
       		printf("%d ", counter);
     		
 		}
-		
+	pthread_mutex_lock(&counter_mutex);	
     	counter++;
   	pthread_mutex_unlock(&counter_mutex);
   }
