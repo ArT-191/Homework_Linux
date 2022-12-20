@@ -19,14 +19,14 @@ void *thread(void *arg) {
   
   	while (counter < N) {
 		
-		pthread_mutex_lock(&counter_mutex);	
-    	int increment = counter++;
-  		pthread_mutex_unlock(&counter_mutex);
+	 pthread_mutex_lock(&counter_mutex);	
+    	 int increment = counter++;
+  	 pthread_mutex_unlock(&counter_mutex);
     			
-		    if (isPrime(counter)) 
-      			printf("%d ", counter);
+		  if (isPrime(counter)) 
+      		    printf("%d ", counter);
     		
-			}	
+		  }	
   }
   return NULL;
 }
@@ -40,7 +40,7 @@ int main() {
   pthread_t thread1, thread2;
     
   if(pthread_create(&thread1, NULL, thread, &N) != 0 )
-    return 1; 
+      return 1; 
   if(pthread_create(&thread2, NULL, thread, &N) != 0)
       return 2;
 
