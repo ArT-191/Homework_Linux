@@ -25,7 +25,7 @@ void *thread(void *arg) {
     		
 		}
 	pthread_mutex_lock(&counter_mutex);	
-    	counter++;
+    	int increment = counter++;
   	pthread_mutex_unlock(&counter_mutex);
   }
   return NULL;
