@@ -18,11 +18,12 @@ void *thread(void *arg) {
   int N = *((int *)arg);
   
   	while (counter <= N) {
-		pthread_mutex_lock(&counter_mutex);
+		
     		if (isPrime(counter)) {			
       		printf("%d ", counter);
     		
 		}
+	pthread_mutex_lock(&counter_mutex);	
     	counter++;
   	pthread_mutex_unlock(&counter_mutex);
   }
