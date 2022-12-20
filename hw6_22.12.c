@@ -19,14 +19,14 @@ void *thread(void *arg) {
   
   	while (counter <= N) {
 		
-    		if (isPrime(counter)) {	
-			
-      		printf("%d ", counter);
+		pthread_mutex_lock(&counter_mutex);	
+    		int increment = counter++;
+  		pthread_mutex_unlock(&counter_mutex);
+    			
+			if (isPrime(counter)) 
+      			printf("%d ", counter);
     		
-		}
-	pthread_mutex_lock(&counter_mutex);	
-    	int increment = counter++;
-  	pthread_mutex_unlock(&counter_mutex);
+			}	
   }
   return NULL;
 }
