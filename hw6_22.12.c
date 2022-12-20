@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int counter = 0;
-
+pthread_mutex_t counter_mutex = PTHREAD_MUTEX_INITIALIZER;
 int isPrime(int n) {
   if (n <= 1)
     return 0;
@@ -16,17 +16,21 @@ int isPrime(int n) {
 
 void *thread(void *arg) {
   int N = *((int *)arg);
-  while (counter <= N) {
-    if (isPrime(counter)) {
-      printf("%d ", counter);
-    }
-    counter++;
+  
+  	while (counter <= N) {
+		pthread_mutex_lock(&counter_mutex);
+    		if (isPrime(counter)) {			
+      		printf("%d ", counter);
+    		
+		}
+    	counter++;
+  	pthread_mutex_unlock(&counter_mutex);
   }
   return NULL;
 }
 
 int main() {
-
+  pthread_mutex_init(&counter_mutex,NULL);
   int N;
   printf("Enter N: ");
   scanf("%d", &N);
@@ -42,6 +46,7 @@ int main() {
       return 3;
   if(pthread_join(thread2, NULL) != 0)
       return 4;
+  pthread_mutex_destroy(&counter_mutex);
 
   return 0;
 }
