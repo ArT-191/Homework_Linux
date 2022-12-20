@@ -17,7 +17,7 @@ int isPrime(int n) {
 void *thread(void *arg) {
   int N = *((int *)arg);
   
-  	while (counter <= N) {
+  	while (counter < N) {
 		
 		pthread_mutex_lock(&counter_mutex);	
     		int increment = counter++;
