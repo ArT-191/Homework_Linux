@@ -20,7 +20,7 @@ void *thread(void *arg) {
   	while (counter < N) {
 		
 		pthread_mutex_lock(&counter_mutex);	
-    		int increment = counter++;
+    	int increment = counter++;
   		pthread_mutex_unlock(&counter_mutex);
     			
 			if (isPrime(counter)) 
