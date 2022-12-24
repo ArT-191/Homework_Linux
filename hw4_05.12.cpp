@@ -57,7 +57,7 @@ void *routine(void *input) {
   
   std::string pathname = "out_" + std::to_string (index) + ".txt"; 
  
-  std::string _result = "=" +  std::to_string (result); // Connecting strings because, "fprintf" takes not more than 8 arguments
+  std::string _result = "= " +  std::to_string (result); // Connecting strings because, "fprintf" takes not more than 8 arguments
   FILE * fd;
   static const char * const operators_to_string[] = { 
   /*It was necessary to,write "enum" in file,
