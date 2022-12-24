@@ -1,16 +1,14 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <pthread.h>
 #include <iostream>
 #include <string>
-#include <stdio.h>
 #include <unistd.h>
 #include <vector>
 #include <fcntl.h>
 #include <cstring>
 #include <sys/types.h>
 #include <sys/stat.h>
-#include <fcntl.h>
+
 
 
 enum Operators {s,m,ss} ;//Creating operators
